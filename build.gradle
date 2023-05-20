@@ -13,8 +13,8 @@ group = project.maven_group
 repositories {
 	mavenCentral()
 	maven { url 'https://jitpack.io' }
-	maven {url = "https://maven.kyrptonaught.dev/"}
-
+	maven { url 'https://maven.kyrptonaught.dev/'}
+	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 dependencies {
@@ -23,12 +23,12 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
+	include(modImplementation('me.lucko:fabric-permissions-api:0.2-SNAPSHOT'))
+	modImplementation 'me.lucko:fabric-permissions-api:0.2-SNAPSHOT'
 }
 
 processResources {
 	inputs.property "version", project.version
-
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version
 	}
