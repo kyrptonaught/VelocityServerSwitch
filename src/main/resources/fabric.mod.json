@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "velocityserverswitch",
-  "version": "1.0.0-1.19",
+  "version": "1.0.0-1.21",
   "name": "Velocity Server Switch",
   "description": "Adds a command to switch the user to another velocity server",
   "authors": [
@@ -18,9 +18,5 @@
     "main": [
       "net.kyrptonaught.velocityserverswitch.VelocityServerSwitchMod"
     ]
-  },
-  "depends": {
-    "fabricloader": ">=0.4.0",
-    "fabric": "*"
   }
 }
